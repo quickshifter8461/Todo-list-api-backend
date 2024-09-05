@@ -9,6 +9,10 @@ app.use(express.json());
 
 let todo = [];
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Todo API');
+});
+
 app.get('/todo', (req, res) => {
     res.json(todo);
 });
